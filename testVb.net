@@ -1,0 +1,32 @@
+
+Public Class Form1
+    Dim tableau(5) As Integer
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim valeur As Integer = TextBox1.Text
+        Dim i As Integer = 0
+        While i < 5
+            tableau(i) = valeur
+            i += 1
+            Exit While
+        End While
+        afficheTab(i - 1)
+    End Sub
+    Private Sub afficheTab(ByVal j As Integer)
+        For i As Integer = 0 To j
+            ListBox1.Items.Add(tableau(i))
+        Next
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim valeur As Integer = TextBox1.Text
+        Dim i As Integer = 0
+        While i < tableau.Length
+            If tableau(i) = TextBox1.Text Then
+                tableau(i) = Nothing
+            End If
+
+        End While
+    End Sub
+End Class
+Blaming projetnnnn/README.md at main · Mohsineotmani/projetnnnn
